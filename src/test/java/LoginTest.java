@@ -18,18 +18,13 @@ public class LoginTest {
 
 	@Test
 	public void testLogin() {
-
 		driver.get("https://www.saucedemo.com/");
 		LoginPage loginPage = new LoginPage(driver);
-		loginPage.Login(driver);
-		
+		loginPage.Login(driver);		
 	}
 	
 	@AfterMethod
 	public void closeBrowser() {
 		driver.quit();
 	}
-	
-
-	
 }

@@ -18,18 +18,31 @@ public class LoginPage {
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		resusableMethods= new ReusableMethods(driver);
+		resusableMethods = new ReusableMethods(driver);
 		if (!driver.getTitle().equals("Swag Labs")) {
-			throw new IllegalStateException(
-					"This is not Login Page," + " current page is: " + driver.getCurrentUrl());
+			throw new IllegalStateException("This is not Login Page," + " current page is: " + driver.getCurrentUrl());
 		}
 	}
-		
-		public void Login(WebDriver driver) {
-			driver.findElement(usernameBy).sendKeys("visual_user");
-			driver.findElement(passwordBy).sendKeys("secret_sauce");
-			driver.findElement(loginBy).click();
-			resusableMethods.captureScreenshot(driver, "logintest");
-			
+
+	public void enterUsername(WebDriver driver) {
+		driver.findElement(usernameBy).sendKeys("visual_user");
+		resusableMethods.captureScreenshot(driver, "logintestenterusername");
+	}
+
+	public void enterPassword(WebDriver driver) {
+		driver.findElement(passwordBy).sendKeys("secret_sauce");
+		resusableMethods.captureScreenshot(driver, "logintestenterpassword");
+	}
+
+	public void clickLoginButton(WebDriver driver) {
+		driver.findElement(loginBy).click();
+		resusableMethods.captureScreenshot(driver, "logintestclickloginbutton");
+
+	}
+
+	public void Login(WebDriver driver) {
+		enterUsername(driver);
+		enterPassword(driver);
+		clickLoginButton(driver);
 	}
 }

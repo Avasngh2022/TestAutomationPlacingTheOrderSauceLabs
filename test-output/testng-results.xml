@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-09-24T15:50:29 IST" name="Default suite" finished-at="2026-09-24T15:51:15 IST" duration-ms="46026">
+  <suite started-at="2026-09-25T13:44:43 IST" name="Default suite" finished-at="2026-09-25T13:45:37 IST" duration-ms="53547">
     <groups>
     </groups>
-    <test started-at="2026-09-24T15:50:29 IST" name="Default test" finished-at="2026-09-24T15:51:15 IST" duration-ms="46026">
+    <test started-at="2026-09-25T13:44:43 IST" name="Default test" finished-at="2026-09-25T13:45:37 IST" duration-ms="53547">
       <class name="LoginTest">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:LoginTest@4686afc2]" started-at="2026-09-24T15:50:29 IST" name="launchBrowser" finished-at="2026-09-24T15:50:34 IST" duration-ms="5219" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:LoginTest@4686afc2]" started-at="2026-09-25T13:44:43 IST" name="launchBrowser" finished-at="2026-09-25T13:44:50 IST" duration-ms="6751" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="testLogin()[pri:0, instance:LoginTest@4686afc2]" started-at="2026-09-24T15:50:34 IST" name="testLogin" finished-at="2026-09-24T15:51:14 IST" duration-ms="40340" status="PASS">
+        <test-method signature="testLogin()[pri:0, instance:LoginTest@4686afc2]" started-at="2026-09-25T13:44:50 IST" name="testLogin" finished-at="2026-09-25T13:45:35 IST" duration-ms="45636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:LoginTest@4686afc2]" started-at="2026-09-24T15:51:14 IST" name="closeBrowser" finished-at="2026-09-24T15:51:15 IST" duration-ms="398" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:LoginTest@4686afc2]" started-at="2026-09-25T13:45:35 IST" name="closeBrowser" finished-at="2026-09-25T13:45:37 IST" duration-ms="1056" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
