@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class ReusableMethods {
-	private WebDriver driver;
+    protected WebDriver driver;
 	public ReusableMethods(WebDriver driver) {
 		this.driver = driver;
 	}

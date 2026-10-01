@@ -1,5 +1,6 @@
 import java.io.File;
 import org.openqa.selenium.io.FileHandler;
+import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,7 +19,7 @@ public class LoginPage {
 
 	public LoginPage(WebDriver driver) {
 		this.driver = driver;
-		resusableMethods = new ReusableMethods(driver);
+		this.resusableMethods = new ReusableMethods(driver);
 		if (!driver.getTitle().equals("Swag Labs")) {
 			throw new IllegalStateException("This is not Login Page," + " current page is: " + driver.getCurrentUrl());
 		}
@@ -26,11 +27,13 @@ public class LoginPage {
 
 	public void enterUsername(WebDriver driver) {
 		driver.findElement(usernameBy).sendKeys("visual_user");
+		Assert.assertTrue(true, "Username is Entered");
 		resusableMethods.captureScreenshot(driver, "logintestenterusername");
 	}
 
 	public void enterPassword(WebDriver driver) {
 		driver.findElement(passwordBy).sendKeys("secret_sauce");
+		Assert.assertTrue(true, "Password is Entered");
 		resusableMethods.captureScreenshot(driver, "logintestenterpassword");
 	}
 
