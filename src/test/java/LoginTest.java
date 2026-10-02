@@ -16,7 +16,7 @@ public class LoginTest {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+	@Test(dataProvider = "usernamePasswordLoginData", dataProviderClass = TestData.class)
 	public void testLogin() {
 		driver.get("https://www.saucedemo.com/");
 		LoginPage loginPage = new LoginPage(driver);
