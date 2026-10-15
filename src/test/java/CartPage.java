@@ -17,7 +17,6 @@ public class CartPage {
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
 		this.resusableMethods =new ReusableMethods(driver);
-		this.loginPage=new LoginPage(driver);
 		this.addToCartPage=new AddToCartPage(driver);
 	}
 	

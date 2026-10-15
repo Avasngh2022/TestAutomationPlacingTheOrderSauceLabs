@@ -18,7 +18,7 @@ public class CheckoutStepOnePage {
 	
 	private By checkoutStepOneContinue = By.xpath("//input[@id='continue']");
 	
-	private By checkoutStepOneCancel = By.xpath("//input[@id='cancel']");
+	private By checkoutStepOneCancel = By.xpath("//button[@id='cancel']");
 	
 	private By checkoutStepOneShoppingCartLink = By.xpath("//input[@id='first-name']/preceding::a[contains(@aria-label,'Cart')]");
 	
@@ -27,7 +27,7 @@ public class CheckoutStepOnePage {
 	public CheckoutStepOnePage(WebDriver driver) {
 		this.driver = driver;
 		this.resusableMethods =new ReusableMethods(driver);
-		this.loginPage=new LoginPage(driver);
+		//this.loginPage=new LoginPage(driver);
 		this.cartPage=new CartPage(driver);
 	}
 	
@@ -92,6 +92,7 @@ public class CheckoutStepOnePage {
 		resusableMethods.captureScreenshot(driver, "CheckoutStepOnePage");
 	}
 	public void checkoutStepOnePage(WebDriver driver) {
+		cartPage.CartPage(driver);
 		verifyCheckoutStepOnePage(driver);
 		enterCheckoutStepOneCheckoutInformation(driver);
 		clickCheckoutStepOneContinueButton(driver);	
